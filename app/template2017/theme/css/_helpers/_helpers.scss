@@ -1,0 +1,41 @@
+/* ==========================================================================
+   Helpers
+   ========================================================================== */
+
+/*
+ * Variables
+ */
+$primaryTextColor: #2B2B2B;
+$highlightTextColor: #81C7CD;
+$hoverTextColor: #774992;
+$linkTextColor: #F3FAFA;
+$secondaryTextColor: #888888;
+$lightTextColor: #fff;
+
+$primaryBgColor: #ffffff;
+$hoverBgColor: #A6D7DB;
+$secondaryBgColor: #000;
+$thirdBgColor: #774992;
+$lightBgColor: #f3f4f6;
+
+$primaryBorderColor: #ffffff;
+$secondaryBorderColor: #888888;
+$brightBorderColor: #81C7CD;
+
+$containerPadding: 20px;
+
+/*
+ * Mixins
+ */
+@import "_mixins/box-model";
+@import "_mixins/typography";
+@import "_mixins/lists";
+@import "_mixins/shapes";
+
+@mixin vertical-align($position: relative) {
+	position: $position;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}

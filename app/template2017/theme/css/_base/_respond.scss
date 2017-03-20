@@ -1,0 +1,173 @@
+/* ==========================================================================
+	Responsive
+   ========================================================================== */
+
+@media (min-width: 480px) {
+	body {
+		text-align: left;
+	}
+	header {
+		.wrapper {
+			@include clearfix;
+			#site_logo {
+				@include span(4);
+			}
+			#welcome {
+				@include span(8 last);
+				padding: 30px 0px 20px 20px;
+				#contact_details {
+					@include clearfix;
+					#picture {
+						float: left;
+						width: 35%;
+						padding-right: 5%;
+					}
+					ul {
+						float: left;
+						width: 60%;
+					}
+				}
+			}
+		}
+	}
+	#main_navigation {
+		ul {
+			li {
+				a {
+					padding: 10px 34px;
+				}
+			}
+		}
+	}
+	#work {
+		.gallery {
+			@include clearfix;
+			.item, .grid-sizer {
+				box-sizing: border-box;
+				width: 49%;
+				float: left;
+			}
+			.gutter-sizer {
+				width: 1%;
+			}
+		}
+	}
+	#social_icons {
+		li {
+			display: inline-block;
+		}
+	}
+}
+@media (min-width: 640px) {
+	header {
+		.wrapper {
+			#welcome {
+				#contact_details {
+					ul {
+						margin: 15px 0;
+					}
+				}
+			}
+		}
+	}
+	#work {
+		.gallery {
+			.item, .grid-sizer {
+				width: 32.3%;
+			}
+		}
+	}
+	#main_navigation {
+		ul {
+			li {
+				padding: 0 5px;
+				a {
+					@include rem(24);
+				}
+			}
+		}
+	}
+	#skills {
+		@include clearfix;
+		.column {
+			@include span(6);
+			&:nth-child(2n) {
+				@include span(last 6);
+			}
+		}
+	}
+	#work_example {
+		article {
+			header {
+				@include clearfix;
+				border-bottom: 0px;
+			  background-size: 56% 100%, 100% 100%;
+				background-repeat: no-repeat;
+			  background-position: 0 0, 0 top;
+			  background-image:
+			    linear-gradient(#774992,#774992),
+			    linear-gradient(#fff, #fff);
+				.wrapper {
+					padding: 0 20px;
+				}
+				.title {
+					@include span(8);
+					padding: 30px 0 40px;
+					background-color: transparent;
+				}
+				.skills {
+					@include span(last 4);
+					padding: 30px 0 40px;
+				}
+			}
+		}
+		.example {
+			.text {
+				@include clearfix;
+				.inner {
+					@include span(isolate 8 at 3 of 12);
+					padding: 40px 0;
+				}
+			}
+			.pic {
+				@include span(12);
+			}
+			.pics {
+				overflow: hidden;
+				.example {
+					@include gallery(4);
+				}
+			}
+		}
+	}
+}
+@media (min-width: 768px) {
+	header {
+		.wrapper {
+			#welcome {
+				#contact_details {
+					#picture {
+						width: 150px;
+					}
+					ul {
+						margin: 20px 0;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1024px) {
+	#work {
+		.gallery {
+			.item, .grid-sizer {
+				width: 24%;
+			}
+		}
+	}
+	#work_example {
+		h1, h3 {
+			@include rem(35);
+		}
+	}
+}

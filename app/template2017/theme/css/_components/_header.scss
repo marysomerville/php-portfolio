@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Header
+   ========================================================================== */
+header {
+	.wrapper {
+		position: relative;
+	}
+	#site_logo {
+		box-sizing: border-box;
+		padding: 30px 0;
+		svg {
+			.st0 {
+				fill: #774992;
+			}
+			.st1 {
+				fill: #81c7cd;
+			}
+			.st2 {
+				fill: #ffffff;
+			}
+		}
+	}
+	#welcome {
+		box-sizing: border-box;
+	}
+}
+#contact_details {
+	#picture {
+		padding-bottom: 17px;
+		img {
+			border-radius: 100px;
+			border: 1px dashed $primaryBorderColor;
+		}
+	}
+	ul {
+		margin: 0 0 20px 0;
+		li {
+			a {
+				color: $highlightTextColor;
+				&:hover {
+					color: $hoverTextColor;
+				}
+			}
+		}
+	}
+}

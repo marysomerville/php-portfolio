@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+#social_icons {
+    padding: 30px 0 15px 0;
+    text-align: center;
+    li {
+    	display: inline-block;
+    	a {
+		    background-image: url(/images/icons/social_icons.png);
+		    background-repeat: no-repeat;
+			background-color: $brightBorderColor;
+			border-radius: 30px;
+		    height: 60px;
+		    width: 60px;
+		    text-indent: -99999px;
+		    display: block;
+		    margin-right: 0.6em;
+		    transition: background-color 0.4s ease;
+			&:hover {
+				background-color: $hoverBgColor;
+			}
+		}
+	}
+}
+$div-list: (twitter,codepen,linkedin);
+	#social_icons li  {
+		@each $link in $div-list {
+		$i: index($div-list, $link);
+		$distance: -68px * ($i - 1);
+		.#{$link} {
+			background-position: $distance 0;
+		}
+	}
+}
+footer {
+	border-top: 1px dashed $secondaryBorderColor;
+    text-align: center;
+    padding: 0 0 20px 0;
+	p {
+		font-size: 11px;
+	}
+}
